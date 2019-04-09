@@ -30,7 +30,11 @@ library(ggplot2)
 
 ##Introduction
 
-This paper investigated the effects of monocular imprinting on ducklings. Since birds do not have a corpus collosum, there is reduced transfer of information between their cerebral hemispheres. The authors performed two sets of experiments. Experiment 1 investigated if a duckling that only imprinted on a decoy with one eye (while the received no imprinting) would only show a preference for that decoy with the imprinted eye, or whether that information would transfer between hemispheres to allow the contralateral eye to also recognize the imprinted decoy. The figure I replicated summarizes the preferences found in the testing groups for this experiment. Experiment 2 investigated the effects of each eye having a different imprint on both monocular and binocolur preference tests. My descriptive and inferentical statistical reanalyses come from this experiment.
+This paper investigated the effects of monocular imprinting on ducklings. Since birds do not have a corpus collosum, there is reduced transfer of information between their cerebral hemispheres. The authors performed two sets of experiments. 
+
+Experiment 1 investigated if a duckling that only imprinted on a decoy with one eye (while the received no imprinting) would only show a preference for that decoy with the imprinted eye, or whether that information would transfer between hemispheres to allow the contralateral eye to also recognize the imprinted decoy. The authors performed a linear mixed-effects analysis and a likelihood ratio test on the data from this experiment. The figure I replicated summarizes the preferences found in the testing groups for Experiment 1. 
+
+Experiment 2 investigated the effects of each eye having a different imprint on both monocular and binocolur preference tests. The evaluated these results using a series of T-tests. My descriptive and inferentical statistical reanalyses evaluate the monocular test group of this experiment.
 
 The data was in one data  file originally (data_monocularducks.xlsx), which I split up into 4 separate .csv files for my analyses and data visualization.
 
@@ -121,8 +125,6 @@ preferences from each eye were normally distributed, they combined the data from
 greater than the preference for the decoy that was novel to that eye. To do this, they ran a two-tailed, one-sample T-test.
 
 
-
-
 Get vector of preference data - preference is proportion of approaches to the imprinted stimulus divided by total approaches (imprinted + novel stimuli)
 
 ```{r}
@@ -137,11 +139,12 @@ t<-t.test(x=dv, mu=0.5, alternative="two.sided")
 t
 ```
 
-This matches the statistics they reported in the article for this test
+This matches the statistics they reported in the article for this test, which suggest a low level of informational integration between the two eyes, as the preference for the imprinted decoy was strong, but not statistically significant.
 
 ##Data Visualization: Figure A1
 
-This figures summarizes the imprinted stimulus preference by eye in each testing group in experiment 1. 
+This figures summarizes the imprinted stimulus preference by eye in each testing group in Experiment 1. 
+
 
 Upload datasets
 
